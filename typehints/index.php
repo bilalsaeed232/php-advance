@@ -1,5 +1,12 @@
 <?php 
-
+/**
+ * 1. should be the first line in php file
+ * 2. would only make this file strict, doesn't apply to other files
+ * 3. if a function defined here uses a particular type, the caller from outside 
+ * is not bound unless stricttypes are declared there as well
+ * 
+ * 
+ */
 declare(strict_types=1);
 
 
@@ -17,6 +24,8 @@ function add(float $a, float $b): float {
 
 
 display_message('Hello everyone');
+
+// now php supports nullable values
 display_message(null); // nullable types are allowed
 // display_message(12.2); // generates typeerror
 // display_message(true); // generates typeerror
